@@ -2,6 +2,8 @@ package br.com.williandoamor.citiesapi.entities;
 
 import br.com.williandoamor.citiesapi.utils.PointType;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
@@ -18,6 +20,8 @@ import javax.persistence.Table;
 @TypeDefs(value = {
         @TypeDef(name = "point", typeClass = PointType.class)
 })
+@Builder
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class City {
